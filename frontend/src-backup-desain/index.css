@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* The Joy of Matcha: warna terinspirasi materi visual brand. Semua style
+   berada di .joy-customer agar halaman admin tidak ikut berubah. */
+.joy-customer {
+  --joy-cream: #f8f1e9;
+  --joy-paper: #fffaf4;
+  --joy-olive: #556043;
+  --joy-olive-dark: #3f4a32;
+  --joy-sage: #e9eddf;
+  --joy-ink: #303326;
+  --joy-muted: #766c5d;
+  --joy-line: #e6dccd;
+  --joy-gold: #bca56f;
+  background: var(--joy-cream);
+  color: var(--joy-ink);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+.joy-customer h1,
+.joy-customer h2,
+.joy-customer h3,
+.joy-customer .joy-display {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+.joy-customer p { text-wrap: pretty; }
+.joy-customer a, .joy-customer button { transition: background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+.joy-customer :is(a,button,input,textarea,select):focus-visible { outline: 3px solid var(--joy-gold); outline-offset: 3px; }
+.joy-customer .bg-gray-50 { background-color: var(--joy-cream); }
+.joy-customer .bg-white { background-color: var(--joy-paper); }
+.joy-customer .bg-green-50 { background-color: var(--joy-sage); }
+.joy-customer .bg-green-700,
+.joy-customer .bg-green-800 { background-color: var(--joy-olive); }
+.joy-customer .bg-green-900 { background-color: var(--joy-olive-dark); }
+.joy-customer .text-green-700,
+.joy-customer .text-green-800,
+.joy-customer .text-green-900,
+.joy-customer .text-green-950 { color: var(--joy-olive-dark); }
+.joy-customer .text-gray-900, .joy-customer .text-gray-800 { color: var(--joy-ink); }
+.joy-customer .text-gray-700, .joy-customer .text-gray-600, .joy-customer .text-gray-500 { color: var(--joy-muted); }
+.joy-customer .border-green-700,
+.joy-customer .border-green-800 { border-color: var(--joy-olive); }
+.joy-customer .border-green-100, .joy-customer .ring-gray-100 { border-color: var(--joy-line); --tw-ring-color: var(--joy-line); }
+.joy-customer .border-gray-300 { border-color: var(--joy-line); }
+.joy-customer .hover\:bg-green-800:hover,
+.joy-customer .hover\:bg-green-900:hover { background-color: var(--joy-olive-dark); }
+.joy-customer .hover\:bg-green-50:hover { background-color: var(--joy-sage); }
+.joy-customer .hover\:text-green-700:hover,
+.joy-customer .hover\:text-green-800:hover { color: var(--joy-olive-dark); }
+.joy-customer :is(article, .rounded-2xl.bg-white, .rounded-3xl.bg-white) { border-color: var(--joy-line); }
+.joy-customer :is(input,textarea,select) { background-color: #fffdf9; color: var(--joy-ink); }
+.joy-customer :is(input,textarea,select)::placeholder { color: #9b927f; }
+
+/* Navbar + logo */
+.joy-header { position: sticky; top: 0; z-index: 40; background: rgba(255,250,244,.96); border-bottom: 1px solid var(--joy-line); backdrop-filter: blur(12px); }
+.joy-brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--joy-olive-dark); text-decoration: none; line-height: .97; }
+.joy-brand-symbol { width: 30px; height: 34px; color: var(--joy-olive); flex-shrink: 0; }
+.joy-brand-title { display: block; font-family: Georgia, "Times New Roman", serif; letter-spacing: -.035em; font-size: 1.38rem; }
+.joy-brand-sub { display: block; font-size: .57rem; letter-spacing: .28em; text-transform: uppercase; font-weight: 700; margin-top: .25rem; }
+.joy-nav-link { color: var(--joy-ink); font-size: .86rem; font-weight: 600; border-bottom: 2px solid transparent; padding: .45rem .12rem; }
+.joy-nav-link:hover, .joy-nav-link.is-active { color: var(--joy-olive); border-bottom-color: var(--joy-olive); }
+.joy-nav-admin { font-size: .79rem; color: var(--joy-muted); }
+.joy-cart-count { background: var(--joy-olive); color: #fff; border-radius: 999px; padding: .08rem .38rem; margin-left: .18rem; }
+.joy-mobile-menu { border: 1px solid var(--joy-line); border-radius: 9px; padding: .48rem .7rem; }
+
+/* Editorial home hero */
+.joy-hero { position: relative; overflow: hidden; background: #f6eee4; border-bottom: 1px solid var(--joy-line); }
+.joy-hero::before { content: ""; position: absolute; width: 38rem; height: 38rem; border-radius: 50%; background: rgba(222,224,201,.4); right: -13rem; top: -16rem; pointer-events: none; }
+.joy-eyebrow { text-transform: uppercase; letter-spacing: .19em; font-size: .7rem; font-weight: 800; color: var(--joy-olive); }
+.joy-hero-title { font-family: Georgia,"Times New Roman",serif; color: var(--joy-olive-dark); font-size: clamp(3rem,6vw,5.8rem); font-weight: 400; line-height: 1.09; letter-spacing: -.045em; }
+.joy-hero-title em { font-weight: 400; font-style: italic; color: #7a8455; }
+.joy-hero-body { color: var(--joy-muted); font-size: 1.03rem; line-height: 1.85; max-width: 33rem; }
+.joy-button { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; background: var(--joy-olive); color: #fff; border: 1px solid var(--joy-olive); border-radius: 999px; padding: .9rem 1.5rem; font-size: .87rem; font-weight: 700; }
+.joy-button:hover { background: var(--joy-olive-dark); border-color: var(--joy-olive-dark); transform: translateY(-1px); }
+.joy-button-outline { color: var(--joy-olive-dark); background: transparent; border-color: #a9ab8e; }
+.joy-button-outline:hover { color: #fff; }
+.joy-hero-photo { border: 1px solid #dfd4c3; background: #ebe8dc; border-radius: 160px 160px 20px 20px; overflow: hidden; box-shadow: 20px 25px 0 rgba(163,157,115,.12); }
+.joy-hero-photo img { object-fit: contain; height: 100%; width: 100%; }
+.joy-hero-placeholder { display: grid; place-items: center; height: 100%; background: linear-gradient(150deg,#ece8d4,#f5ecdc); }
+.joy-hero-note { font-size: .72rem; letter-spacing: .13em; color: var(--joy-muted); text-transform: uppercase; }
+.joy-hero-stamp { font-family: Georgia,serif; font-size: 1.12rem; color: var(--joy-olive); }
+.joy-section-title { color: var(--joy-olive-dark); font-size: clamp(2rem,4vw,3rem); font-weight: 400; }
+.joy-product-card { border: 1px solid var(--joy-line); background: var(--joy-paper); border-radius: 22px; overflow: hidden; box-shadow: 0 10px 35px rgba(55,49,32,.045); transition: transform .2s, box-shadow .2s; }
+.joy-product-card:hover { transform: translateY(-4px); box-shadow: 0 15px 38px rgba(55,49,32,.1); }
+.joy-product-card .joy-product-image { background: #f1e9dc; overflow: hidden; }
+.joy-product-card .joy-product-image img { transition: transform .25s; }
+.joy-product-card:hover .joy-product-image img { transform: scale(1.025); }
+.joy-card-link { display: inline-flex; align-items: center; justify-content: center; border: 1px solid #b5b49a; padding: .72rem 1rem; border-radius: 999px; color: var(--joy-olive-dark); font-size: .85rem; font-weight: 700; }
+.joy-card-link:hover { background: var(--joy-sage); }
+.joy-card-primary { background: var(--joy-olive); color: #fff; border-color: var(--joy-olive); }
+.joy-card-primary:hover { background: var(--joy-olive-dark); }
+.joy-card-primary:disabled { background: #a6a99d; border-color: #a6a99d; cursor: not-allowed; }
+.joy-footer { border-top: 1px solid var(--joy-line); background: #eee6d9; }
+.joy-footer a:hover { color: var(--joy-olive-dark); text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .joy-hero-title { font-size: clamp(2.8rem, 12vw, 4.2rem); }
+  .joy-brand-title { font-size: 1.15rem; }
+  .joy-hero-photo { border-radius: 130px 130px 16px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .joy-customer *, .joy-customer *::before, .joy-customer *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
